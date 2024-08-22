@@ -5,7 +5,7 @@ class Elf(
     override val modifiers: Map<String, Int> = mapOf(
         "Dexterity" to 2
     ),
-    override val abilities: Array<String> = arrayOf(
+    override val skills: Array<String> = arrayOf(
         "Darkvision",
         "Keen Senses",
         "Fey Acestry",

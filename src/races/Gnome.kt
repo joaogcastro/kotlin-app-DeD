@@ -5,7 +5,7 @@ class Gnome(
     override val modifiers: Map<String, Int> = mapOf(
         "Intelligence" to 2
     ),
-    override val abilities: Array<String> = arrayOf(
+    override val skills: Array<String> = arrayOf(
         "Darkvision",
         "Gnome Cunning"
     )

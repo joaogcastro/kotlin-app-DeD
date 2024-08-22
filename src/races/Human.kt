@@ -10,7 +10,7 @@ class Human(
         "Wisdom" to 1,
         "Charisma" to 1
     ),
-    override val abilities: Array<String> = arrayOf(
+    override val skills: Array<String> = arrayOf(
         "Extra Language"
     )
 ) : Race

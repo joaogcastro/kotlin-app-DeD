@@ -6,7 +6,7 @@ class HalfOrc(
         "Strength" to 2,
         "Constitution" to 1
     ),
-    override val abilities: Array<String> = arrayOf(
+    override val skills: Array<String> = arrayOf(
         "Darkvision",
         "Menacing",
         "Relentless Endurance",

@@ -6,7 +6,7 @@ class Dragonborn(
         "Strength" to 2,
         "Charisma" to 1
     ),
-    override val abilities: Array<String> = arrayOf(
+    override val skills: Array<String> = arrayOf(
         "Draconic Ancestry",
         "Breath Weapon",
         "Damage Resistance"
