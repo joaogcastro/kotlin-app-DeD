@@ -1,6 +1,6 @@
 fun main() {
     // Player builder instance
-    val playerBuilder: PlayerBuilder = PlayerBuilder()
+    val playerBuilder = PlayerBuilder()
 
     // Create your player
     val myPlayer = playerBuilder.create()
