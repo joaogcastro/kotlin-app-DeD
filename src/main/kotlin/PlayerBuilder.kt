@@ -1,3 +1,5 @@
+@file:Suppress("MemberVisibilityCanBePrivate")
+
 import races.*
 import kotlin.math.floor
 
@@ -81,13 +83,13 @@ class PlayerBuilder (
 
 
     /******************************************************************************************
-     * Private functions
+     * Internal functions
      ******************************************************************************************/
 
     /**
      * Select player race
      */
-    private fun selectRace(player: Player) {
+    internal fun selectRace(player: Player) {
         println("Available races:")
         races.forEachIndexed { index, race ->
             println("${index}: ${race.name}")
@@ -111,7 +113,7 @@ class PlayerBuilder (
     /**
      * Select player abilities using Point Buy system
      */
-    private fun selectAbilities(player: Player) {
+    internal fun selectAbilities(player: Player) {
         val abilities = mutableMapOf<String, Int>()
 
         println("You have $pointBuyBalance points to distribute among the abilities.")
@@ -151,7 +153,7 @@ class PlayerBuilder (
     /**
      * Set the race and the abilities modifiers
      */
-    private fun setRaceModifiers(player: Player) {
+    internal fun setRaceModifiers(player: Player) {
         for (modifier in player.race!!.modifiers) {
             player.abilities[modifier.key] = (player.abilities[modifier.key] ?: 0) + modifier.value
         }
@@ -162,7 +164,7 @@ class PlayerBuilder (
     /**
      * Show current player abilities and values
      */
-    private fun showAbilities(player: Player) {
+    internal fun showAbilities(player: Player) {
         player.abilities.forEach { (key, value) ->
             println("$key: $value")
         }
@@ -171,14 +173,14 @@ class PlayerBuilder (
     /**
      * Set health points based on player's constitution
      */
-    private fun setHealthPoints(player: Player) {
+    internal fun setHealthPoints(player: Player) {
         player.healthPoints = player.hitDie + constitutionModifier(player.abilities["Constitution"]!!)
     }
 
     /**
      * Calculate constitution modifier
      */
-    private fun constitutionModifier(constitution: Int): Int {
+    internal fun constitutionModifier(constitution: Int): Int {
         val result = (constitution - 10).toDouble() / 2
         return floor(result).toInt()
     }
