@@ -4,4 +4,7 @@ fun main() {
 
     // Create your player
     val myPlayer = playerBuilder.create()
+
+    // Show player information
+    playerBuilder.status(myPlayer)
 }
